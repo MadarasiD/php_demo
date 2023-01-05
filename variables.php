@@ -21,6 +21,10 @@
 
     echo $name . " " . $number;
 
+    $name = "<h1>Hello</h1>";
+
+    echo $name;
+
     ?>
     
 </body>
