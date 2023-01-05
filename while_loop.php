@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <title>While loops</title>
 </head>
 <body>
 
 <?php 
 
-$numberList = array( 23, 64, 267, 555, 851, '5435', 345, '<h1>Hello</h1>');
+$counter = 0;
 
-// $numberList = [2,25,555];
+    while( $counter < 10 ){
 
-print_r($numberList);
+        echo "hello";
 
-// echo $numberList[0];
+        echo "<br>";
 
+        echo $counter;
+
+        echo "<br>";
+
+
+        $counter++;
+       // $counter = $counter + 1;
+
+    }
 
 
 ?>
