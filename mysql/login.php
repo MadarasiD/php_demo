@@ -1,3 +1,18 @@
+<?php 
+
+if(isset($_POST['submit'])) {
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+echo $username;
+echo $password;
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +26,7 @@
 </head>
 <body>
 
-<div class="container h-100 d-flex justify-content-center align-items-center">
+<div class="container h-100 d-flex justify-content-center align-items-center vw-75">
     <div class="vh-100 d-flex justify-content-center align-items-center">
 
         <form action="login.php" method="post">
