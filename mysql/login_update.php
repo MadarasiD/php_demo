@@ -1,21 +1,7 @@
-<?php include "db.php";
+<?php include "db.php";?>
+<?php include "functions.php";?>
 
 
-$query = "SELECT * FROM users";
-
-
-$result = mysqli_query($connection, $query);
-
-
-if(!$result) {
-
-    die('Query FAILED' . mysqli_error($link));
-
-}
-
-
-
-?>
 
 
 <!DOCTYPE html>
@@ -55,7 +41,12 @@ if(!$result) {
 
             <select name="" id="">
 
-            <option value="">1</option>
+                <?php 
+
+                showAllData();
+                
+                ?>
+            
             </select>
 
             </div>
