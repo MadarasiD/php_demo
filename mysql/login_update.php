@@ -1,6 +1,30 @@
 <?php include "db.php";?>
 <?php include "functions.php";?>
 
+<?php 
+
+if(isset($_POST['submit'])) {
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+$id = $_POST['id'];
+
+$query = "UPDATE users SET ";
+$query .= "username = '$username', ";
+$query .= "password = '$password' ";
+$query .= "WHERE id = $id ";
+
+$result = mysqli_query($connection, $query);
+
+    if(!$result) {
+
+        die("QUERY FAILED" . mysqli_error($connection));
+
+    }
+
+}
+
+?>
 
 
 
@@ -13,13 +37,13 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <title>Login php</title>
+    <title>Login Update php</title>
 </head>
 <body>
 
 <div class="container h-100 d-flex justify-content-center align-items-center vw-75">
     <div class="vh-100 d-flex justify-content-center align-items-center">
-    <form action="login_create.php" method="post">
+    <form action="login_update.php" method="post">
 
     <div class="form-group">
 
@@ -39,7 +63,7 @@
 
             <div class="form-group">
 
-            <select name="" id="">
+            <select name="id" id="">
 
                 <?php 
 
