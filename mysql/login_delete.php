@@ -5,7 +5,7 @@
 
 if(isset($_POST['submit'])) {
 
-    UpdateTable();
+    DeleteTable();
 
 }
 
@@ -28,7 +28,8 @@ if(isset($_POST['submit'])) {
 
 <div class="container h-100 d-flex justify-content-center align-items-center vw-75">
     <div class="vh-100 d-flex justify-content-center align-items-center">
-    <form action="login_update.php" method="post">
+
+    <form action="login_delete.php" method="post">
 
     <div class="form-group">
 
@@ -61,7 +62,7 @@ if(isset($_POST['submit'])) {
             </div>
 
 
-            <input type="submit" name="submit" value="UPDATE" class="btn btn-primary mt-2">
+            <input type="submit" name="submit" value="DELETE" class="btn btn-primary mt-2">
 
 
             </form>
