@@ -27,7 +27,9 @@ if(isset($_POST['submit'])) {
 <body>
 
 <div class="container h-100 d-flex justify-content-center align-items-center vw-75">
-    <div class="vh-100 d-flex justify-content-center align-items-center">
+<div class="vh-100 d-flex align-items-center flex-column">
+
+<h1 class="text-center">Delete</h1>
 
     <form action="login_delete.php" method="post">
 

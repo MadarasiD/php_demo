@@ -18,8 +18,39 @@ while($row = mysqli_fetch_assoc($result)){
 
 }
 
+function CreateTable() {
+
+    if(isset($_POST['submit'])) {
+
+    global $connection;
+
+    $username = $_POST['username'];
+$password = $_POST['password'];
+
+
+$query = "INSERT INTO users( username,password )";
+$query .= "VALUES ('$username', '$password')";
+
+$result = mysqli_query($connection, $query);
+
+
+if(!$result) {
+
+    die('Query FAILED' . mysqli_error());
+
+} else {
+
+    echo "Record Create";
+
+}
+}
+
+}
+
 
 function UpdateTable() {
+
+    if(isset($_POST['submit'])) {
 
     global $connection;
 
@@ -38,8 +69,13 @@ $result = mysqli_query($connection, $query);
 
         die("QUERY FAILED" . mysqli_error($connection));
 
+    }else {
+
+        echo "Record Update";
+    
     }
 
+}
 }
 
 function DeleteTable() {
@@ -59,6 +95,10 @@ $result = mysqli_query($connection, $query);
 
         die("QUERY FAILED" . mysqli_error($connection));
 
+    }else {
+
+        echo "Record Delete";
+    
     }
 
 }
